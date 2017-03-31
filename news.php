@@ -1,4 +1,6 @@
 <?php
+header('content-type: application/json; charset=utf-8');
+header("Access-Control-Allow-Origin: *");
   //$entityBody = file_get_contents('php://input');
   // Method: POST, PUT, GET etc
 // Data: array("param" => "value") ==> index.php?param=value
@@ -36,6 +38,5 @@ $response = array(
   'notify' => false,
   'message_format' => 'text'
 );
-
 echo json_encode($response, JSON_FORCE_OBJECT);
 ?>
