@@ -26,16 +26,26 @@ $url="https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=17079
 $contents = curl_get_contents($url);
 $articles = $contents->articles[array_rand($contents->articles)];
 
-$response = array(
-  'color' => 'green',
-  'message' => $articles->urlToImage.' '.addslashes($articles->title),
-  'thumbnail' => array(
-    'url' => $articles->urlToImage,
-    'width' => 300,
+$card = array(
+  'style' => 'link',
+  "url" => $articles->url,
+  "id" => "fee4d9a3-685d-4cbd-abaa-c8850d9b1960",
+  "title" => addcslashes($articles->title),
+  "description" => array(
+    "format" => "html",
+    "value" => "<b>Add-on link:</b> <a href='#' data-target='hip-connect-tester:hctester.dialog.simple' data-target-options='{\"options\":{\"title\":\"Custom Title\"}, \"parameters\":{\"from\":\"link\"}}'>Open Dialog with parameters</a>"
   ),
-  'html' => addslashes($articles->description),
+  "icon" => array(
+    "url" => "http://icons.iconarchive.com/icons/designbolts/hand-stitched/24/RSS-icon.png"
+  ),
+  "date" => time()
+);
+
+$response = array(
+  'message' => addslashes($articles->description),
+  'card' => $card,
   'notify' => false,
-  'message_format' => 'text'
+  'message_format' => 'html'
 );
 echo json_encode($response, JSON_FORCE_OBJECT);
 ?>
