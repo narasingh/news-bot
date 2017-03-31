@@ -47,5 +47,34 @@ $response = array(
   'notify' => false,
   'message_format' => 'html'
 );
-echo json_encode($response, JSON_FORCE_OBJECT);
+//echo json_encode($response, JSON_FORCE_OBJECT);
+echo '{
+  "style": "application",
+  "url": "https://www.application.com/an-object",
+  "format": "medium",
+  "id": "db797a68-0aff-4ae8-83fc-2e72dbb1a707",
+  "title": "Sample application card",
+  "description": "This is a description of an application object.\nwith 2 lines of text",
+  "icon": {
+    "url": "http://bit.ly/1S9Z5dF"
+  },
+  "attributes": [
+    {
+      "label": "attribute1",
+      "value": {
+        "label": "value1"
+      }
+    },
+    {
+      "label": "attribute2",
+      "value": {
+        "icon": {
+          "url": "http://bit.ly/1S9Z5dF"
+        },
+        "label": "value2",
+        "style": "lozenge-complete"
+      }
+    }
+  ]
+}';
 ?>
