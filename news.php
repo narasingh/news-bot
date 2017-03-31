@@ -24,11 +24,12 @@ header("Access-Control-Allow-Origin: *");
 
 $url="https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=17079e8f3fb24e55842030ff5783ef53";
 $contents = curl_get_contents($url);
-$randomIndex = array_rand($contents->articles);
+$articles = $contents->articles[array_rand($contents->articles)];
 
 $response = array(
   'color' => 'green',
-  'message' => addslashes($contents->articles[$randomIndex]->title),
+  'message' => addslashes($articles->title),
+  'type' => $articles->urlToImage,
   'notify' => false,
   'message_format' => 'text'
 );
