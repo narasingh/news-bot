@@ -29,7 +29,9 @@ $articles = $contents->articles[array_rand($contents->articles)];
 $response = array(
   'color' => 'green',
   'message' => addslashes($articles->title),
-  'type' => $articles->urlToImage,
+  'card' => array(
+    'style' => $articles->urlToImage
+  ),
   'notify' => false,
   'message_format' => 'text'
 );
