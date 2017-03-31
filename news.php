@@ -49,32 +49,25 @@ $response = array(
 );
 //echo json_encode($response, JSON_FORCE_OBJECT);
 echo '{
-  "style": "application",
-  "url": "https://www.application.com/an-object",
-  "format": "medium",
-  "id": "db797a68-0aff-4ae8-83fc-2e72dbb1a707",
-  "title": "Sample application card",
-  "description": "This is a description of an application object.\nwith 2 lines of text",
-  "icon": {
-    "url": "http://bit.ly/1S9Z5dF"
-  },
-  "attributes": [
-    {
-      "label": "attribute1",
-      "value": {
-        "label": "value1"
-      }
-    },
-    {
-      "label": "attribute2",
-      "value": {
-        "icon": {
-          "url": "http://bit.ly/1S9Z5dF"
-        },
-        "label": "value2",
-        "style": "lozenge-complete"
-      }
-    }
-  ]
-}';
+    "color": "gray",
+    "card": {
+              "style": "link",
+              "url": "http://www.website.com/some-article",
+              "id": "c253adc6-11fa-4941-ae26-7180d67e814a",
+              "title": "Sample link card",
+              "description": "This is some information about the link shared.\nin 2 lines of text",
+              "icon": {
+                "url": "http://bit.ly/1Qrfs1M"
+              },
+              "date": 1453867674631,
+              "thumbnail": {
+                "url": "http://bit.ly/1TmKuKQ",
+                "url@2x": "http://bit.ly/1TmKuKQ",
+                "width": 1193,
+                "height": 564
+              }
+          },
+    "message" : "test",
+    "message_format" : "html"
+}'
 ?>
