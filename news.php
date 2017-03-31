@@ -27,15 +27,15 @@ $contents = curl_get_contents($url);
 $articles = $contents->articles[array_rand($contents->articles)];
 
 $response = array(
-  'color' => 'random',
-  'message' => '<p>'.addslashes($articles->title).'</p>',
+  'color' => 'green',
+  'message' => $articles->urlToImage.' '.addslashes($articles->title),
   'thumbnail' => array(
     'url' => $articles->urlToImage,
     'width' => 300,
   ),
   'html' => addslashes($articles->description),
   'notify' => false,
-  'message_format' => 'html'
+  'message_format' => 'text'
 );
 echo json_encode($response, JSON_FORCE_OBJECT);
 ?>
