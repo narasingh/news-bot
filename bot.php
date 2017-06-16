@@ -35,9 +35,6 @@ function afterInsert() {
       "id" => $userId,
       "title" => 'Timely card layout',
       "description" => $description,
-      "icon" => array(
-        "url" => "http://bit.ly/1Qrfs1M"
-      ),
       "date" => time(),
       "thumbnail" => array(
         "url" => 'https://c.martech.zone/wp-content/uploads/2010/06/example-logo.png',
