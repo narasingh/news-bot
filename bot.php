@@ -35,8 +35,8 @@ function afterInsert() {
       "description" => $description,
       "date" => time(),
       "thumbnail" => array(
-        "url" => 'https://technrisk.com/timely/images/logo_icons.png',
-        "url@2x" => 'https://technrisk.com/timely/images/logo_icons.png',
+        "url" => 'https://c.martech.zone/wp-content/uploads/2010/06/example-logo.png',
+        "url@2x" => 'https://c.martech.zone/wp-content/uploads/2010/06/example-logo.png',
         "width" => 1193,
         "height" => 564
       )
