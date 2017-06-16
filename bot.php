@@ -28,20 +28,26 @@ function afterInsert() {
 
   $description = $userName. ' '. ' has submitted his timesheet';
   $response = array(
-      "style" => "media",
+    "color" => "green",
+    "card" => array(
+      "style" => "link",
       "url" => 'http://i0.kym-cdn.com/photos/images/newsfeed/000/131/786/tumblr_ljkeuyjp1a1qafrh6.gif',
       "id" => $userId,
       "title" => 'Timely card layout',
-      "description" => array(
-        "value" => $description,
-        "format" => "text"
+      "description" => $description,
+      "icon" => array(
+        "url" => "http://bit.ly/1Qrfs1M"
       ),
+      "date" => time(),
       "thumbnail" => array(
         "url" => 'https://c.martech.zone/wp-content/uploads/2010/06/example-logo.png',
         "url@2x" => 'https://c.martech.zone/wp-content/uploads/2010/06/example-logo.png',
         "width" => 1193,
         "height" => 564
       )
+    ),
+    "message" => "test",
+    "message_format" => "html"
   );
 
   return $response;
