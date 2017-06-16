@@ -28,8 +28,6 @@ function afterInsert() {
 
   $description = $userName. ' '. ' has submitted his timesheet';
   $response = array(
-    "color" => "green",
-    "card" => array(
       "style" => "media",
       "url" => 'http://i0.kym-cdn.com/photos/images/newsfeed/000/131/786/tumblr_ljkeuyjp1a1qafrh6.gif',
       "id" => $userId,
@@ -44,7 +42,6 @@ function afterInsert() {
         "width" => 1193,
         "height" => 564
       )
-    )
   );
 
   return $response;
