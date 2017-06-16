@@ -31,10 +31,13 @@ function afterInsert() {
     "color" => "green",
     "card" => array(
       "style" => "link",
-      "url" => '',
+      "url" => 'http://i0.kym-cdn.com/photos/images/newsfeed/000/131/786/tumblr_ljkeuyjp1a1qafrh6.gif',
       "id" => "fee4d9a3-685d-4cbd-abaa-c8850d9b1960",
       "title" => 'TIMELY',
-      "description" => $description,
+      "description" => array(
+        'format' => 'html',
+        'value' => $description
+      ),
       "date" => time(),
       "thumbnail" => array(
         "url" => 'https://c.martech.zone/wp-content/uploads/2010/06/example-logo.png',
@@ -42,9 +45,7 @@ function afterInsert() {
         "width" => 1193,
         "height" => 564
       )
-    ),
-    'message' => "test",
-    "message_format" => 'html'
+    )
   );
 
   return $response;
